@@ -1,0 +1,23 @@
+---
+layout: default
+---
+<article class="post">
+  <header class="post-header">
+    <div class="post-meta">
+      <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %-d, %Y" }}</time>
+      <span class="read-time">5 min read</span>
+    </div>
+    <h1 class="post-title">{{ page.title }}</h1>
+    {% if page.excerpt %}
+    <p class="post-excerpt">{{ page.excerpt }}</p>
+    {% endif %}
+  </header>
+
+  <div class="post-content">
+    {{ content }}
+  </div>
+</article>
+
+<nav class="post-nav">
+  <a href="{{ '/' | relative_url }}" class="back-link">&larr; All posts</a>
+</nav>

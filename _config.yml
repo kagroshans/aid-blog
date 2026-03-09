@@ -1,0 +1,26 @@
+title: Alternative Investing Doctor
+description: A physician's perspective on alternative investments and financial independence
+url: "https://blog.alternativeinvestingdoctor.com"
+baseurl: ""
+
+author:
+  name: Alternative Investing Doctor
+
+permalink: /:slug
+
+markdown: kramdown
+highlighter: rouge
+
+kramdown:
+  input: GFM
+  hard_wrap: false
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - .gitignore

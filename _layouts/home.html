@@ -1,0 +1,29 @@
+---
+layout: default
+---
+<div class="home">
+  <div class="blog-intro">
+    <h1 class="blog-title">Writing</h1>
+    <p class="blog-description">{{ site.description }}</p>
+  </div>
+
+  <ul class="post-list">
+    {% for post in site.posts %}
+    <li class="post-item">
+      <article>
+        <div class="post-meta">
+          <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %-d, %Y" }}</time>
+          <span class="read-time">5 min read</span>
+        </div>
+        <h2 class="post-item-title">
+          <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+        </h2>
+        {% if post.excerpt %}
+        <p class="post-item-excerpt">{{ post.excerpt | strip_html | truncate: 200 }}</p>
+        {% endif %}
+        <a href="{{ post.url | relative_url }}" class="read-more">Read more &rarr;</a>
+      </article>
+    </li>
+    {% endfor %}
+  </ul>
+</div>
