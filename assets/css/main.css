@@ -72,6 +72,7 @@ img {
   border-bottom: 3px solid var(--gold);
   padding: var(--spacing-md) 0;
   background-color: var(--navy);
+  overflow: hidden;
 }
 
 .site-title {
@@ -87,7 +88,7 @@ img {
 }
 
 .site-logo {
-  height: 80px;
+  height: 120px;
   width: auto;
   display: block;
 }
