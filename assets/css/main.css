@@ -35,14 +35,16 @@ body {
   font-family: var(--font-body);
   font-weight: 400;
   color: var(--near-black);
-  background-color: var(--white);
+  background-color: var(--off-white);
   line-height: 1.75;
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 a {
   color: var(--navy);
   text-decoration: none;
+  transition: color 0.15s ease;
 }
 
 a:hover {
@@ -119,10 +121,15 @@ img {
 .post-item {
   border-top: 1px solid #E5E7EB;
   padding: var(--spacing-md) 0;
+  transition: none;
 }
 
 .post-item:last-child {
   border-bottom: 1px solid #E5E7EB;
+}
+
+.post-item article {
+  padding-left: 0;
 }
 
 .post-meta {
@@ -150,6 +157,7 @@ img {
 
 .post-item-title a {
   color: var(--near-black);
+  transition: color 0.15s ease;
 }
 
 .post-item-title a:hover {
